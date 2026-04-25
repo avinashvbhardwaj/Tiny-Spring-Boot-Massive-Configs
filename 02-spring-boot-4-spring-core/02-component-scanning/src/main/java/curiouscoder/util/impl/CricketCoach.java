@@ -1,4 +1,4 @@
-package curiouscoder.springbootcore.common.impl;
+package curiouscoder.util.impl;
 
 
 import curiouscoder.springbootcore.common.Coach;
