@@ -12,7 +12,7 @@
 	<artifactId>springbootcrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-core-demo</name>
-	<description>Demo project for Spring Boot CRUD -> create student</description>
+	<description>Demo project for Spring Boot CRUD -> create students</description>
 	<url/>
 	<licenses>
 		<license/>

@@ -17,7 +17,8 @@ public class SpringbootcrudApplication {
     @Bean
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
         return runner -> {
-            createStudent(studentDAO);
+//            createStudent(studentDAO);
+            createMultipleStudent(studentDAO);
         };
     }
 
@@ -33,6 +34,25 @@ public class SpringbootcrudApplication {
         //display the student id
         System.out.println("Saved student. Generated id: " + student.getId());
 
+    }
+
+    private void createMultipleStudent(StudentDAO studentDAO) {
+        //create multiple student object
+        System.out.println("Creating 3 Student object ...");
+        Student student1 = new Student("Agastya", "Bhardwaj", "agastya@curiouscoder.com");
+        Student student2 = new Student("Shubham", "Tiwari", "shubham@curiouscoder.com");
+        Student student3 = new Student("Mahesh", "Hanwatkar", "mahesh@curiouscoder.com");
+
+        //save the student objects
+        System.out.println("Saving the Students ...");
+        studentDAO.save(student1);
+        studentDAO.save(student2);
+        studentDAO.save(student3);
+
+        //display the student ids
+        System.out.println("Saved student1. Generated id: " + student1.getId());
+        System.out.println("Saved student2. Generated id: " + student2.getId());
+        System.out.println("Saved student3. Generated id: " + student3.getId());
     }
 
 }
