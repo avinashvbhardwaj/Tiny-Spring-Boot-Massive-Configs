@@ -11,7 +11,7 @@
 	<groupId>curiouscoder</groupId>
 	<artifactId>springbootcrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-core-demo</name>
+	<name>spring-boot-crud-demo</name>
 	<description>Demo project for Spring Boot CRUD -> delete using enetity manager</description>
 	<url/>
 	<licenses>
