@@ -22,7 +22,8 @@ public class SpringbootcrudApplication {
 //            createStudent(studentDAO);
 //            createMultipleStudent(studentDAO);
 //            readStudent(studentDAO);
-            queryForStudents(studentDAO);
+//            queryForStudents(studentDAO);
+            queryForStudentsByLastName(studentDAO);
         };
     }
 
@@ -87,6 +88,16 @@ public class SpringbootcrudApplication {
             System.out.println(student);
         }
 
+    }
+
+    private void queryForStudentsByLastName(StudentDAO studentDAO) {
+        // get a list of Students by lastName
+        List<Student> theStudents = studentDAO.findByLastName("Bhardwaj");
+
+        // display list of students
+        for(Student student : theStudents){
+            System.out.println(student);
+        }
     }
 
 }
