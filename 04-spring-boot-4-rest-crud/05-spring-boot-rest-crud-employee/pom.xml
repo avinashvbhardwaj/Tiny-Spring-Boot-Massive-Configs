@@ -12,7 +12,7 @@
 	<artifactId>restcrud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-rest-crud</name>
-    <description>Demo project for String Boot REST CRUD Employee(Model) Implementation</description>
+    <description>Demo project for String Boot REST CRUD Employee(Model) Implementation added service layer</description>
 	<url/>
 	<licenses>
 		<license/>
