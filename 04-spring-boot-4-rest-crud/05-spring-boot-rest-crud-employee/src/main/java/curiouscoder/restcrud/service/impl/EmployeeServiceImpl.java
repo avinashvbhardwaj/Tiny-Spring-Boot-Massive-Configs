@@ -1,13 +1,14 @@
 package curiouscoder.restcrud.service.impl;
 
-import curiouscoder.restcrud.Employee;
-import curiouscoder.restcrud.dao.EmployeeDAO;
-import curiouscoder.restcrud.service.EmployeeService;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import curiouscoder.restcrud.dao.EmployeeDAO;
+import curiouscoder.restcrud.model.Employee;
+import curiouscoder.restcrud.service.EmployeeService;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -37,7 +38,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     @Transactional
-    public void deleteById(Integer id) {
-        employeeDAO.deleteById(id);
+    public Employee deleteById(Integer id) {
+        return employeeDAO.deleteById(id);
     }
 }

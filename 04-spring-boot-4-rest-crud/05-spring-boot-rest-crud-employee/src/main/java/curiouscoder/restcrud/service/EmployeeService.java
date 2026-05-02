@@ -1,7 +1,8 @@
 package curiouscoder.restcrud.service;
 
-import curiouscoder.restcrud.Employee;
 import java.util.List;
+
+import curiouscoder.restcrud.model.Employee;
 
 public interface EmployeeService {
 
@@ -11,5 +12,5 @@ public interface EmployeeService {
 
     Employee findById(Integer id);
 
-    void deleteById(Integer id);
+    Employee deleteById(Integer id);
 }

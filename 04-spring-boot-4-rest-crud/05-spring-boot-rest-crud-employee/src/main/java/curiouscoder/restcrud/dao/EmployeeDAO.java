@@ -1,8 +1,8 @@
 package curiouscoder.restcrud.dao;
 
-import curiouscoder.restcrud.Employee;
-
 import java.util.List;
+
+import curiouscoder.restcrud.model.Employee;
 
 public interface EmployeeDAO {
 
@@ -12,6 +12,6 @@ public interface EmployeeDAO {
 
     Employee findById(Integer id);
 
-    void deleteById(Integer id);
+    Employee deleteById(Integer id);
 
 }

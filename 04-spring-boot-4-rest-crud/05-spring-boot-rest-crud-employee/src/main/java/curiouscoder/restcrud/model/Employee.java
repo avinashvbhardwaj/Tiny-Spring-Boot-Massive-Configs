@@ -1,28 +1,28 @@
-package curiouscoder.restcrud;
+package curiouscoder.restcrud.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
 
-    //define fields
+    // define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
-    //define constructure
-    public Employee(){
+    // define constructure
+    public Employee() {
 
     }
 
@@ -32,7 +32,7 @@ public class Employee {
         this.email = email;
     }
 
-    //define getter/setter
+    // define getter/setter
 
     public Integer getId() {
         return id;
@@ -65,7 +65,7 @@ public class Employee {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    //define toString method
+    // define toString method
 
     @Override
     public String toString() {
