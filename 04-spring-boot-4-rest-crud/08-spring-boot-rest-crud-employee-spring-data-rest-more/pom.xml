@@ -12,7 +12,7 @@
     <artifactId>restcruddatarest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-rest-crud-spring-data-rest</name>
-    <description>Demo project for String Boot REST CRUD Employee(Model) Spring Data REST</description>
+    <description>Demo project for String Boot REST CRUD Employee(Model) Spring Data REST More...</description>
     <url/>
     <licenses>
         <license/>
