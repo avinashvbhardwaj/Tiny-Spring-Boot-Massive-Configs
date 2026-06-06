@@ -18,13 +18,13 @@ public class DemoSecurityConfiguration {
         UserDetails avi = User.builder()
                 .username("avi")
                 .password("{noop}test123")
-                .roles("ADMIN", "MANAGER")
+                .roles("ADMIN", "MANAGER", "EMPLOYEE")
                 .build();
 
         UserDetails shubh = User.builder()
                 .username("shubh")
                 .password("{noop}test123")
-                .roles("EMPLOYEE")
+                .roles("MANAGER", "EMPLOYEE")
                 .build();
 
         UserDetails mahi = User.builder()
@@ -40,13 +40,20 @@ public class DemoSecurityConfiguration {
      public SecurityFilterChain filterChain(HttpSecurity http) {
          http.authorizeHttpRequests(configurer -> configurer
                  .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
+
                  .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
-                 .requestMatchers(HttpMethod.PUT, "/api/employee").hasRole("MANAGER")
-                 .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("ADMIN")
-                 .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("ADMIN")
-                 .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("ADMIN")
+                 .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER")
+
+                 .requestMatchers(HttpMethod.PATCH, "/api/employees/**").hasRole("ADMIN")
                  .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
-         ).httpBasic(Customizer.withDefaults());
+         );
+
+         //Use HTTP Basic Authentication
+         http.httpBasic(Customizer.withDefaults());
+
+         //Disable Cross-Site Request Forgery
+         // in General, Not required for stateless REST APIs, That Uses POST, PUT, DELETE, PATCH
+         http.csrf(csrf -> csrf.disable());
          return http.build();
      }
 }
