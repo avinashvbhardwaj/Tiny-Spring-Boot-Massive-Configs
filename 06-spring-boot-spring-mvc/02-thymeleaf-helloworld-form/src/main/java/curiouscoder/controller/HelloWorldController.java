@@ -12,13 +12,13 @@ public class HelloWorldController {
 
     // a controller to show the input form
     @RequestMapping("/showForm")
-    public String showForm(){
+    public String showForm() {
         return "helloworld-form";
     }
 
     // a controller to process the output form
     @RequestMapping("/processForm")
-    public String processForm(Model theModel){
+    public String processForm(Model theModel) {
         theModel.addAttribute("theDate", LocalDateTime.now());
         return "helloworld-process";
     }

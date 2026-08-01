@@ -5,10 +5,12 @@
     <title>Hello World - Input Form</title>
 </head>
 <body>
-    <form th:action="@{/processForm}" method="GET">
-        <input type = "text" name="name"
+<form th:action="@{/processForm}" method="GET">
+    <label>
+        <input type="text" name="name"
                placeholder="What's your name"/>
-        <input type="submit" />
-    </form>
+    </label>
+    <input type="submit"/>
+</form>
 </body>
 </html>
