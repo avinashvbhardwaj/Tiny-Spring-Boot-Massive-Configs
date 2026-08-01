@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello World - Output Form</title>
+</head>
+<body>
+
+Hello World of Spring !!!
+<br>
+<br>
+My Request param name is <span th:text="${param.name}"/>
+<br>
+<br>
+The message is in lowercase <span th:text="${message}"/>
+<br>
+<br>
+
+<h1 th:text="'Time on the server is ' + ${theDate}"/>
+
+</body>
+</html>
