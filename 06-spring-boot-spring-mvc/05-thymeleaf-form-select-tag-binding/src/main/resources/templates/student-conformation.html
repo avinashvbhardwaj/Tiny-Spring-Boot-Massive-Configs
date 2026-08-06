@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Confirmation Page</title>
+</head>
+<body>
+
+Student Confirmation Page
+<br>
+<br>
+Student Name: <span th:text="${student.firstName} + '  ' + ${student.lastName}"/>
+<br>
+<br>
+Country: <span th:text="${student.country}"/>
+<br>
+<br>
+
+<h1 th:text="'Time on the server is ' + ${theDate}"/>
+
+</body>
+</html>
